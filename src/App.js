@@ -1,9 +1,9 @@
-import React, {useRef, useState} from 'react';
+import React from 'react';
 import './App.scss';
 
 //import canvas from react three fiber
 import { Canvas } from 'react-three-fiber';
-import { softShadows, OrbitControls, Stage } from '@react-three/drei';
+import { softShadows, OrbitControls } from '@react-three/drei';
 import Bunny from "./Bunny_test1.jsx"
 
 softShadows();
@@ -43,6 +43,7 @@ function App() {
         <planeBufferGeometry attach='geometry' args={[100,100]}/>
         <meshStandardMaterial attach='material' opacity={0.3} />
       </mesh>
+      
       <Bunny scale={[0.05,0.05,0.05]}/>
 
     </group>
@@ -58,5 +59,4 @@ export default App;
 /**
  * 
  * loading models and play animation:  https://www.youtube.com/watch?v=q7yH_ajINpA
- * cast shadow: 
  */
